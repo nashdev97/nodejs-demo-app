@@ -31,7 +31,7 @@ jobs:
         password: ${{ secrets.dckr_pat_DTjrShq1b2GGOPYtQvx4m_cl_gk }}
 
     - name: Build Docker Image
-      run: docker build -t ${{ secrets.nash2911 }}/nodejs-demo-app .
+      run: docker build -t ${{ secrets.nash2911 }}/nodejs-demo-app:latest .
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.dckr_pat_DTjrShq1b2GGOPYtQvx4m_cl_gk }}/nodejs-demo-app
+      run: docker push ${{ secrets.dckr_pat_DTjrShq1b2GGOPYtQvx4m_cl_gk }}/nodejs-demo-app:latest

@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: ci/cd Pipeline
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
+    - name: Set up node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
@@ -34,4 +34,4 @@ jobs:
       run: docker build -t ${{ secrets.DOCKER_USERNAME }}/nodejs-demo-app:latest .
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.DOCKER_TOKEN }}/nodejs-demo-app
+      run: docker push ${{ secrets.DOCKER_TOKEN }}/nodejs-demo-app:latest
